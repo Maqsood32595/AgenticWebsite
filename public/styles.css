@@ -13,12 +13,12 @@
   
   --bg-primary: #0d0d0d;
   --bg-corridor: #080808;
-  --bg-card: rgba(18, 18, 18, 0.85);
-  --bg-card-hover: rgba(26, 26, 26, 0.95);
+  --bg-card: rgba(16, 16, 16, 0.96);
+  --bg-card-hover: rgba(26, 26, 26, 0.98);
   --text-primary: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --text-dim: rgba(255, 255, 255, 0.42);
-  --border-card: rgba(255, 255, 255, 0.12);
+  --text-secondary: rgba(255, 255, 255, 0.88);
+  --text-dim: rgba(255, 255, 255, 0.72);
+  --border-card: rgba(255, 255, 255, 0.14);
   --border-focus: rgba(255, 255, 255, 0.85);
   
   --accent-primary: #ffffff;
@@ -48,18 +48,18 @@
 }
 
 body.theme-light {
-  /* Tequila Light Inversion Tokens */
+  /* Tequila Light Inversion Tokens - High Contrast & Opaque Shielding */
   --bg-rgb: 250, 250, 250;
   --text-rgb: 13, 13, 13;
   
   --bg-primary: #fafafa;
   --bg-corridor: #f2f2f2;
-  --bg-card: rgba(255, 255, 255, 0.88);
+  --bg-card: rgba(255, 255, 255, 0.97);
   --bg-card-hover: #ffffff;
   --text-primary: #0d0d0d;
-  --text-secondary: rgba(13, 13, 13, 0.7);
-  --text-dim: rgba(13, 13, 13, 0.42);
-  --border-card: rgba(13, 13, 13, 0.12);
+  --text-secondary: #1f2937;
+  --text-dim: #374151;
+  --border-card: rgba(13, 13, 13, 0.14);
   --border-focus: rgba(13, 13, 13, 0.85);
   
   --accent-primary: #0d0d0d;
@@ -877,15 +877,15 @@ body.theme-light .btn-video-reset:hover {
    4. WALL CARDS (Adaptive to Dark & Light Modes)
    ========================================================================== */
 .wall-card-box {
-  width: 86%;
-  max-width: 1220px;
-  min-height: 520px;
+  width: 93%;
+  max-width: 1380px;
+  min-height: 540px;
   background: var(--bg-card);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
   border-radius: 32px;
   border: 1px solid var(--border-card);
-  padding: 60px 68px;
+  padding: 48px 56px;
   box-shadow: var(--card-shadow);
   display: flex;
   flex-direction: column;
@@ -895,11 +895,11 @@ body.theme-light .btn-video-reset:hover {
 
 .wall-tag {
   font-family: var(--font-sans);
-  font-size: 0.72rem;
+  font-size: 0.74rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--text-dim);
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 12px;
 }
 
@@ -1159,14 +1159,14 @@ body.theme-light .impact-media-overlay-badge .badge-tag {
    6A. ROOM 05: VERTICAL DEEP DECK — ADS & PERFORMANCE MARKETING BY FLICK
    ========================================================================== */
 .vertical-deck-container {
-  width: 88%;
-  max-width: 1220px;
-  height: calc(100vh - 150px);
-  min-height: 540px;
-  max-height: 720px;
+  width: 93%;
+  max-width: 1380px;
+  height: calc(100vh - 120px);
+  min-height: 560px;
+  max-height: 800px;
   background: var(--bg-card);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
   border-radius: 32px;
   border: 1px solid var(--border-card);
   box-shadow: var(--card-shadow);
@@ -1190,7 +1190,7 @@ body.theme-light .impact-media-overlay-badge .badge-tag {
   min-height: 100%;
   max-height: 100%;
   box-sizing: border-box;
-  padding: 36px 60px 36px 60px;
+  padding: 34px 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -2436,10 +2436,138 @@ body.theme-light .btn-outline:hover {
   background: rgba(13, 13, 13, 0.06);
 }
 
-body.theme-light .wall-card-box {
-  background: rgba(255, 255, 255, 0.88);
-  border-color: rgba(13, 13, 13, 0.1);
-  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.06);
+body.theme-light .wall-card-box,
+body.theme-light .vertical-deck-container {
+  background: rgba(255, 255, 255, 0.97) !important;
+  border-color: rgba(13, 13, 13, 0.14) !important;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.08) !important;
+}
+
+body.theme-dark .wall-card-box,
+body.theme-dark .vertical-deck-container {
+  background: rgba(16, 16, 16, 0.96) !important;
+  border-color: rgba(255, 255, 255, 0.14) !important;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.85) !important;
+}
+
+/* Razor-Sharp High Contrast Typography in Light Mode */
+body.theme-light .wall-tag {
+  color: #1f2937 !important;
+  font-weight: 700 !important;
+}
+
+body.theme-light .wall-quote-subtext {
+  color: #1f2937 !important;
+  font-weight: 500 !important;
+}
+
+body.theme-light .story-lead {
+  color: #0d0d0d !important;
+  font-weight: 500 !important;
+}
+
+body.theme-light .story-body {
+  color: #1f2937 !important;
+  font-weight: 450 !important;
+}
+
+body.theme-light .v-slide-hint {
+  color: #0d0d0d !important;
+  font-weight: 700 !important;
+}
+
+body.theme-light .v-slide-counter {
+  color: #1f2937 !important;
+  font-weight: 700 !important;
+}
+
+body.theme-light .v-badge-num {
+  color: #1f2937 !important;
+  font-weight: 800 !important;
+}
+
+body.theme-light .faq-question-btn {
+  color: #0d0d0d !important;
+  font-weight: 700 !important;
+}
+
+body.theme-light .faq-answer {
+  color: #1f2937 !important;
+  font-size: 0.84rem !important;
+  line-height: 1.6 !important;
+  font-weight: 450 !important;
+}
+
+body.theme-light .faq-item {
+  background: #f8fafc !important;
+  border-color: rgba(13, 13, 13, 0.14) !important;
+}
+
+body.theme-light .faq-item.is-open {
+  background: #ffffff !important;
+  border-color: #0d0d0d !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Light Mode Inner Promo & Callout Boxes (e.g. Brand FAQ Left Box) */
+body.theme-light .vertical-deck-slide div[style*="background: var(--bg-card)"] {
+  background: #ffffff !important;
+  border-color: rgba(13, 13, 13, 0.14) !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04) !important;
+}
+
+body.theme-light .vertical-deck-slide div[style*="color: var(--text-dim)"] {
+  color: #111827 !important;
+  font-weight: 600 !important;
+}
+
+body.theme-light .vertical-deck-slide div[style*="color: var(--text-secondary)"] {
+  color: #1f2937 !important;
+  font-weight: 450 !important;
+}
+
+body.theme-light .vertical-deck-slide a[style*="color: inherit"] {
+  color: #0d0d0d !important;
+  font-weight: 600 !important;
+}
+
+body.theme-light .vertical-deck-slide div[style*="border-top: 1px solid rgba(255,255,255,0.08)"] {
+  border-top-color: rgba(13, 13, 13, 0.12) !important;
+}
+
+/* Dark Mode Typography Polish & Luminous Legibility */
+body.theme-dark .wall-tag {
+  color: rgba(255, 255, 255, 0.78) !important;
+  font-weight: 700 !important;
+}
+
+body.theme-dark .wall-quote-subtext {
+  color: rgba(255, 255, 255, 0.88) !important;
+}
+
+body.theme-dark .story-body {
+  color: rgba(255, 255, 255, 0.88) !important;
+}
+
+body.theme-dark .v-slide-hint {
+  color: rgba(255, 255, 255, 0.82) !important;
+  font-weight: 700 !important;
+}
+
+body.theme-dark .v-slide-counter {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+body.theme-dark .faq-answer {
+  color: rgba(255, 255, 255, 0.86) !important;
+}
+
+body.theme-dark .vertical-deck-slide div[style*="color: var(--text-dim)"] {
+  color: rgba(255, 255, 255, 0.78) !important;
+}
+
+body.theme-dark .vertical-deck-slide div[style*="color: var(--text-secondary)"] {
+  color: rgba(255, 255, 255, 0.88) !important;
 }
 
 body.theme-light .feature-pill-card {
@@ -2622,8 +2750,9 @@ body.theme-light .input-field:focus {
 
   .wall-card-box,
   .vertical-deck-container {
-    width: 92%;
-    padding: 36px 32px;
+    width: 95%;
+    max-width: 100%;
+    padding: 34px 28px;
   }
 
   .vertical-deck-slide {
