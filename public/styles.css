@@ -877,15 +877,15 @@ body.theme-light .btn-video-reset:hover {
    4. WALL CARDS (Adaptive to Dark & Light Modes)
    ========================================================================== */
 .wall-card-box {
-  width: 93%;
-  max-width: 1380px;
-  min-height: 540px;
+  width: 86%;
+  max-width: 1140px;
+  min-height: 520px;
   background: var(--bg-card);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border-radius: 32px;
+  border-radius: 28px;
   border: 1px solid var(--border-card);
-  padding: 48px 56px;
+  padding: 40px 46px;
   box-shadow: var(--card-shadow);
   display: flex;
   flex-direction: column;
