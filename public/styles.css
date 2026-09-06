@@ -465,7 +465,10 @@ body.theme-light .nav-direct-phone {
   font-family: var(--font-serif);
   font-style: italic;
   font-size: 1.25rem;
-  color: var(--color-subtitle);
+  background: linear-gradient(135deg, #1e293b 0%, #334155 25%, #cbd5e1 50%, #475569 75%, #1e293b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.08));
   font-weight: 500;
   margin-bottom: 28px;
   line-height: 1.5;
@@ -2466,7 +2469,14 @@ body.theme-light .wall-tag {
   font-weight: 700 !important;
 }
 
-body.theme-light .wall-quote-subtext,
+body.theme-light .wall-quote-subtext {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 25%, #cbd5e1 50%, #475569 75%, #1e293b 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.08));
+  font-weight: 500 !important;
+}
+
 body.theme-light .wall-header-title + p,
 body.theme-light .room-subtitle,
 body.theme-light .vertical-deck-slide div > p.room-subtitle,
@@ -2559,7 +2569,14 @@ body.theme-dark .wall-tag {
   font-weight: 700 !important;
 }
 
-body.theme-dark .wall-quote-subtext,
+body.theme-dark .wall-quote-subtext {
+  background: linear-gradient(135deg, #94a3b8 0%, #cbd5e1 30%, #ffffff 50%, #cbd5e1 70%, #94a3b8 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  filter: drop-shadow(0 0 10px rgba(203, 213, 225, 0.22));
+  font-weight: 500 !important;
+}
+
 body.theme-dark .wall-header-title + p,
 body.theme-dark .room-subtitle,
 body.theme-dark .vertical-deck-slide div > p.room-subtitle,
