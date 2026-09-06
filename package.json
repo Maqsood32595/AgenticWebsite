@@ -1,0 +1,26 @@
+{
+  "name": "flick-growth-engine",
+  "version": "1.0.0",
+  "description": "Flick Studio modular multi-agent B2B lead generation & automated 8-vector audit suite",
+  "type": "module",
+  "scripts": {
+    "agent:1-new-businesses": "node src/extract_newly_registered_businesses.js",
+    "agent:2-google-no-website": "node src/extract_popular_google_no_website_leads.js",
+    "agent:3-full-suite-8vector-auditor": "node src/run_full_suite_website_health_auditor.js",
+    "agent:4-active-ad-spenders": "node src/extract_active_ad_spenders_leaky_funnels.js",
+    "agent:5-active-hiring-leads": "node src/extract_active_marketing_hiring_leads.js",
+    "agent:last-10-days-leads": "node src/extract_last_10_days_new_companies.js",
+    "compile:master-leads": "node src/compile_master_flick_leads.js",
+    "start": "node server/index.js",
+    "test": "node tests/piet/piet.mjs",
+    "migrate": "node server/db/supabase_migrator.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "pg": "^8.23.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

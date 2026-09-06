@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Allow: /llms.txt
+Allow: /api/flick/agent/availability
+Allow: /api/flick/agent/openapi.json
+
+Sitemap: http://localhost:5060/sitemap.xml

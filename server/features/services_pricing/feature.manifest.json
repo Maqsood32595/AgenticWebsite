@@ -1,0 +1,12 @@
+{
+  "id": "flick-services-pricing",
+  "name": "Services Catalog & Transparent Pricing",
+  "version": "1.0.0",
+  "prefix": "/api/flick/services",
+  "description": "Exposes verified creative services, transparent package tiers, and case studies portfolio",
+  "capabilities": [
+    "listServices",
+    "getServiceBySlug",
+    "listPortfolio"
+  ]
+}

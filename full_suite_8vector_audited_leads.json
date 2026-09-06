@@ -1,0 +1,267 @@
+[
+  {
+    "name": "Metropolitan Premium Properties",
+    "category": "Real Estate Brokerage",
+    "url": "https://metropolitan.realestate",
+    "phone": "+971 58 648 8888",
+    "email": "info@metropolitan.realestate",
+    "location": "Business Bay, Dubai",
+    "reachable": true,
+    "loadTimeSeconds": "0.50",
+    "overallHealthScore": 51,
+    "verdict": "🔴 PRIME REDESIGN & AI-SEO CANDIDATE",
+    "vectorBreakdown": {
+      "v1_copyright": "⚠️ Missing Explicit Copyright",
+      "v2_speed": "✅ Tesla-Fast Response (0.50s)",
+      "v3_ai_seo": "❌ Missing Schema.org JSON-LD (Invisible to ChatGPT & Google AI)",
+      "v4_whatsapp": "❌ Missing Direct wa.me WhatsApp Button",
+      "v5_opengraph": "❌ Missing og:image (Shows Blank Gray Box on WhatsApp)",
+      "v6_viewport": "✅ Mobile Viewport Tag Active",
+      "v7_code_hygiene": "✅ Modern JavaScript Architecture",
+      "v8_ssl_security": "✅ Secure HTTPS Verified"
+    },
+    "criticalLeaksFound": [
+      "Missing Schema.org Structured Data (Invisible to AI Search Engines)",
+      "Missing Semantic <h1> Tag",
+      "Missing 1-Click WhatsApp Quick-Chat CTA (Losing 60% Mobile Inquiries)",
+      "Broken WhatsApp Link Preview (Missing og:image preview card)"
+    ],
+    "flickAdvisoryPitch": "Complete Web Redesign & AI-SEO Glow-Up (AED 25,000 - 45,000 Upfront)"
+  },
+  {
+    "name": "Biolite Aesthetic Clinic",
+    "category": "Anti-Aging & Medical Spa",
+    "url": "https://biolitedubai.com",
+    "phone": "+971 50 292 0086",
+    "email": "concierge@biolitedubai.com",
+    "location": "Umm Suqeim 2, Dubai",
+    "reachable": true,
+    "loadTimeSeconds": "1.46",
+    "overallHealthScore": 56,
+    "verdict": "🔴 PRIME REDESIGN & AI-SEO CANDIDATE",
+    "vectorBreakdown": {
+      "v1_copyright": "⚠️ Missing Explicit Copyright",
+      "v2_speed": "✅ Tesla-Fast Response (1.46s)",
+      "v3_ai_seo": "❌ Missing Schema.org JSON-LD (Invisible to ChatGPT & Google AI)",
+      "v4_whatsapp": "❌ Missing Direct wa.me WhatsApp Button",
+      "v5_opengraph": "❌ Missing og:image (Shows Blank Gray Box on WhatsApp)",
+      "v6_viewport": "✅ Mobile Viewport Tag Active",
+      "v7_code_hygiene": "✅ Modern JavaScript Architecture",
+      "v8_ssl_security": "✅ Secure HTTPS Verified"
+    },
+    "criticalLeaksFound": [
+      "Missing Schema.org Structured Data (Invisible to AI Search Engines)",
+      "Missing 1-Click WhatsApp Quick-Chat CTA (Losing 60% Mobile Inquiries)",
+      "Broken WhatsApp Link Preview (Missing og:image preview card)"
+    ],
+    "flickAdvisoryPitch": "Complete Web Redesign & AI-SEO Glow-Up (AED 25,000 - 45,000 Upfront)"
+  },
+  {
+    "name": "Tania's Teahouse",
+    "category": "Lifestyle Cafe & Events",
+    "url": "https://taniasteahouse.com",
+    "phone": "+971 4 324 0021",
+    "email": "hello@taniasteahouse.com",
+    "location": "Dubai Hills Estate",
+    "reachable": true,
+    "loadTimeSeconds": "0.95",
+    "overallHealthScore": 61,
+    "verdict": "🔴 PRIME REDESIGN & AI-SEO CANDIDATE",
+    "vectorBreakdown": {
+      "v1_copyright": "✅ Fresh Copyright (© 2025)",
+      "v2_speed": "✅ Tesla-Fast Response (0.95s)",
+      "v3_ai_seo": "❌ Missing Schema.org JSON-LD (Invisible to ChatGPT & Google AI)",
+      "v4_whatsapp": "❌ Missing Direct wa.me WhatsApp Button",
+      "v5_opengraph": "❌ Missing og:image (Shows Blank Gray Box on WhatsApp)",
+      "v6_viewport": "✅ Mobile Viewport Tag Active",
+      "v7_code_hygiene": "✅ Modern JavaScript Architecture",
+      "v8_ssl_security": "✅ Secure HTTPS Verified"
+    },
+    "criticalLeaksFound": [
+      "Missing Schema.org Structured Data (Invisible to AI Search Engines)",
+      "Missing 1-Click WhatsApp Quick-Chat CTA (Losing 60% Mobile Inquiries)",
+      "Broken WhatsApp Link Preview (Missing og:image preview card)"
+    ],
+    "flickAdvisoryPitch": "Complete Web Redesign & AI-SEO Glow-Up (AED 25,000 - 45,000 Upfront)"
+  },
+  {
+    "name": "White & Co Real Estate",
+    "category": "Real Estate Brokerage",
+    "url": "https://whiteandcogroup.com",
+    "phone": "+971 4 876 2333",
+    "email": "marketing@whiteandcogroup.com",
+    "location": "Motor City, Dubai",
+    "reachable": true,
+    "loadTimeSeconds": "1.64",
+    "overallHealthScore": 95,
+    "verdict": "🟢 HIGH PERFORMANCE (Maintain & Scale)",
+    "vectorBreakdown": {
+      "v1_copyright": "⚠️ Missing Explicit Copyright",
+      "v2_speed": "✅ Tesla-Fast Response (1.64s)",
+      "v3_ai_seo": "✅ Active Schema.org JSON-LD",
+      "v4_whatsapp": "✅ Direct WhatsApp CTA Integrated",
+      "v5_opengraph": "✅ Rich OpenGraph Card Configured",
+      "v6_viewport": "✅ Mobile Viewport Tag Active",
+      "v7_code_hygiene": "✅ Modern JavaScript Architecture",
+      "v8_ssl_security": "✅ Secure HTTPS Verified"
+    },
+    "criticalLeaksFound": [],
+    "flickAdvisoryPitch": "Performance Ads & 4K Video Creative Retainer (AED 15,000 - 25,000/mo)"
+  },
+  {
+    "name": "Lucia Clinic Dubai",
+    "category": "Aesthetic Dermatology",
+    "url": "https://luciaclinic.com",
+    "phone": "+971 56 115 9194",
+    "email": "info@luciaclinic.com",
+    "location": "Jumeirah 2, Dubai",
+    "reachable": true,
+    "loadTimeSeconds": "0.30",
+    "overallHealthScore": 100,
+    "verdict": "🟢 HIGH PERFORMANCE (Maintain & Scale)",
+    "vectorBreakdown": {
+      "v1_copyright": "✅ Fresh Copyright (© 2026)",
+      "v2_speed": "✅ Tesla-Fast Response (0.30s)",
+      "v3_ai_seo": "✅ Active Schema.org JSON-LD",
+      "v4_whatsapp": "✅ Direct WhatsApp CTA Integrated",
+      "v5_opengraph": "✅ Rich OpenGraph Card Configured",
+      "v6_viewport": "✅ Mobile Viewport Tag Active",
+      "v7_code_hygiene": "✅ Modern JavaScript Architecture",
+      "v8_ssl_security": "✅ Secure HTTPS Verified"
+    },
+    "criticalLeaksFound": [],
+    "flickAdvisoryPitch": "Performance Ads & 4K Video Creative Retainer (AED 15,000 - 25,000/mo)"
+  },
+  {
+    "name": "Nightjar Coffee Roasters",
+    "category": "Artisanal F&B / Roastery",
+    "url": "https://nightjar.coffee",
+    "phone": "+971 50 518 1768",
+    "email": "info@nightjar.coffee",
+    "location": "Alserkal Avenue, Al Quoz 1",
+    "reachable": true,
+    "loadTimeSeconds": "0.43",
+    "overallHealthScore": 75,
+    "verdict": "🟡 CONVERSION & SPEED OPTIMIZATION CANDIDATE",
+    "vectorBreakdown": {
+      "v1_copyright": "⚠️ Missing Explicit Copyright",
+      "v2_speed": "✅ Tesla-Fast Response (0.43s)",
+      "v3_ai_seo": "✅ Active Schema.org JSON-LD",
+      "v4_whatsapp": "❌ Missing Direct wa.me WhatsApp Button",
+      "v5_opengraph": "✅ Rich OpenGraph Card Configured",
+      "v6_viewport": "✅ Mobile Viewport Tag Active",
+      "v7_code_hygiene": "✅ Modern JavaScript Architecture",
+      "v8_ssl_security": "✅ Secure HTTPS Verified"
+    },
+    "criticalLeaksFound": [
+      "Missing Semantic <h1> Tag",
+      "Missing 1-Click WhatsApp Quick-Chat CTA (Losing 60% Mobile Inquiries)"
+    ],
+    "flickAdvisoryPitch": "Speed Optimization & WhatsApp Conversion Setup (AED 12,000 - 18,000)"
+  },
+  {
+    "name": "Comptoir 102 Concept Store",
+    "category": "Organic Dining & Boutique",
+    "url": "https://comptoir102.com",
+    "phone": "+971 4 385 4555",
+    "email": "contact@comptoir102.com",
+    "location": "Jumeirah 1, Dubai",
+    "reachable": true,
+    "loadTimeSeconds": "0.73",
+    "overallHealthScore": 85,
+    "verdict": "🟢 HIGH PERFORMANCE (Maintain & Scale)",
+    "vectorBreakdown": {
+      "v1_copyright": "❌ Outdated Copyright (© 2024)",
+      "v2_speed": "✅ Tesla-Fast Response (0.73s)",
+      "v3_ai_seo": "✅ Active Schema.org JSON-LD",
+      "v4_whatsapp": "✅ Direct WhatsApp CTA Integrated",
+      "v5_opengraph": "✅ Rich OpenGraph Card Configured",
+      "v6_viewport": "✅ Mobile Viewport Tag Active",
+      "v7_code_hygiene": "✅ Modern JavaScript Architecture",
+      "v8_ssl_security": "✅ Secure HTTPS Verified"
+    },
+    "criticalLeaksFound": [
+      "Stale Copyright Year (© 2024)"
+    ],
+    "flickAdvisoryPitch": "Performance Ads & 4K Video Creative Retainer (AED 15,000 - 25,000/mo)"
+  },
+  {
+    "name": "Dr. Roze BioHealth Clinics",
+    "category": "Biological Dental Practice",
+    "url": "https://drroze.com",
+    "phone": "+971 4 388 1388",
+    "email": "contact@drroze.com",
+    "location": "Jumeirah Beach Road",
+    "reachable": true,
+    "loadTimeSeconds": "0.92",
+    "overallHealthScore": 85,
+    "verdict": "🟢 HIGH PERFORMANCE (Maintain & Scale)",
+    "vectorBreakdown": {
+      "v1_copyright": "❌ Outdated Copyright (© 2024)",
+      "v2_speed": "✅ Tesla-Fast Response (0.92s)",
+      "v3_ai_seo": "✅ Active Schema.org JSON-LD",
+      "v4_whatsapp": "✅ Direct WhatsApp CTA Integrated",
+      "v5_opengraph": "✅ Rich OpenGraph Card Configured",
+      "v6_viewport": "✅ Mobile Viewport Tag Active",
+      "v7_code_hygiene": "✅ Modern JavaScript Architecture",
+      "v8_ssl_security": "✅ Secure HTTPS Verified"
+    },
+    "criticalLeaksFound": [
+      "Stale Copyright Year (© 2024)"
+    ],
+    "flickAdvisoryPitch": "Performance Ads & 4K Video Creative Retainer (AED 15,000 - 25,000/mo)"
+  },
+  {
+    "name": "Seven Media Dubai",
+    "category": "PR & Communications",
+    "url": "https://sevenmedia.ae",
+    "phone": "+971 4 450 7888",
+    "email": "info@sevenmedia.ae",
+    "location": "Dubai Media City",
+    "reachable": true,
+    "loadTimeSeconds": "0.39",
+    "overallHealthScore": 71,
+    "verdict": "🟡 CONVERSION & SPEED OPTIMIZATION CANDIDATE",
+    "vectorBreakdown": {
+      "v1_copyright": "⚠️ Missing Explicit Copyright",
+      "v2_speed": "✅ Tesla-Fast Response (0.39s)",
+      "v3_ai_seo": "❌ Missing Schema.org JSON-LD (Invisible to ChatGPT & Google AI)",
+      "v4_whatsapp": "✅ Direct WhatsApp CTA Integrated",
+      "v5_opengraph": "❌ Missing og:image (Shows Blank Gray Box on WhatsApp)",
+      "v6_viewport": "✅ Mobile Viewport Tag Active",
+      "v7_code_hygiene": "✅ Modern JavaScript Architecture",
+      "v8_ssl_security": "✅ Secure HTTPS Verified"
+    },
+    "criticalLeaksFound": [
+      "Missing Schema.org Structured Data (Invisible to AI Search Engines)",
+      "Broken WhatsApp Link Preview (Missing og:image preview card)"
+    ],
+    "flickAdvisoryPitch": "Speed Optimization & WhatsApp Conversion Setup (AED 12,000 - 18,000)"
+  },
+  {
+    "name": "The Luxury Closet",
+    "category": "Pre-Owned Luxury D2C",
+    "url": "https://theluxurycloset.com",
+    "phone": "+971 4 586 7800",
+    "email": "marketing@theluxurycloset.com",
+    "location": "Al Barsha 1, Dubai",
+    "reachable": true,
+    "loadTimeSeconds": "3.56",
+    "overallHealthScore": 82,
+    "verdict": "🟢 HIGH PERFORMANCE (Maintain & Scale)",
+    "vectorBreakdown": {
+      "v1_copyright": "⚠️ Missing Explicit Copyright",
+      "v2_speed": "⚠️ Moderate Speed Lag (3.56s)",
+      "v3_ai_seo": "✅ Active Schema.org JSON-LD",
+      "v4_whatsapp": "✅ Direct WhatsApp CTA Integrated",
+      "v5_opengraph": "✅ Rich OpenGraph Card Configured",
+      "v6_viewport": "✅ Mobile Viewport Tag Active",
+      "v7_code_hygiene": "✅ Modern JavaScript Architecture",
+      "v8_ssl_security": "✅ Secure HTTPS Verified"
+    },
+    "criticalLeaksFound": [
+      "Missing Semantic <h1> Tag"
+    ],
+    "flickAdvisoryPitch": "Performance Ads & 4K Video Creative Retainer (AED 15,000 - 25,000/mo)"
+  }
+]

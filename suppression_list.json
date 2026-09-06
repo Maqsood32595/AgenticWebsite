@@ -1,0 +1,15 @@
+{
+  "description": "Flick Studio Official Do Not Contact (DNC / DNM) Suppression Registry",
+  "updatedAt": "2026-09-03T23:15:00Z",
+  "suppressedPhones": [
+    "+971 50 000 0000",
+    "+971 55 111 2222"
+  ],
+  "suppressedEmails": [
+    "optout@example.ae",
+    "stop@domain.ae"
+  ],
+  "suppressedDomains": [
+    "blockedcompany.ae"
+  ]
+}

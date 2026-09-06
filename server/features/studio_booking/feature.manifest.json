@@ -1,0 +1,12 @@
+{
+  "id": "flick-studio-booking",
+  "name": "Live Consultation & Studio Scheduler",
+  "version": "1.0.0",
+  "prefix": "/api/flick/booking",
+  "description": "Real-time consultation and studio recording time slot locking and cancellation",
+  "capabilities": [
+    "listAvailableSlots",
+    "bookSlot",
+    "cancelSlot"
+  ]
+}

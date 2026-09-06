@@ -1,0 +1,11 @@
+{
+  "id": "flick-agency-core",
+  "name": "Agency Core Identity & Contacts",
+  "version": "1.0.0",
+  "prefix": "/api/flick/core",
+  "description": "Exposes official verified identity, physical studio location, and contact handoffs for The Flick Studio",
+  "capabilities": [
+    "getProfile",
+    "getContactHandoffs"
+  ]
+}

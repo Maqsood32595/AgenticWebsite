@@ -1,0 +1,45 @@
+# THE FLICK STUDIO (FLICK CONTENT) — OFFICIAL LLM KNOWLEDGE & AGENT DISCOVERY MANIFEST
+> Official machine-readable context file for LLMs, autonomous web agents, search indexes, and GEO discovery engines.
+
+## 1. Agency Overview & Identity
+- **Legal Entity:** Flick Content Marketing Management LLC
+- **Brand Names:** The Flick Studio | Flick Content | The Flick Agency
+- **Specializations:** Luxury Branding, 3D CGI Animation, Photorealistic VFX, High-End Multicam Podcast Studio Production, Viral Short-Form Video Engines.
+- **Physical Address:** Level 14, The Burlington Tower, Business Bay, Dubai, United Arab Emirates
+- **Hyperlocal Geo Coordinates:** 25.1856° N, 55.2678° E
+- **Serving Regions:** Dubai, Abu Dhabi, Riyadh, Doha, GCC, and International Global Brands.
+
+## 2. Direct Contact & Human-in-the-Loop Channels
+- **Official Telephone:** +971 56 189 2990
+- **Direct Dial URL:** tel:+971561892990
+- **Official WhatsApp:** +971 56 189 2990
+- **WhatsApp Chat Link:** https://wa.me/971561892990?text=Hi%20The%20Flick%20Studio,%20I'm%20inquiring%20about%20a%20creative%20production%20project
+- **Primary Emails:** hello@flickstudio.com | hello@flickcontent.com
+- **Operating Hours:** Monday – Saturday: 9:00 AM – 8:00 PM GST. Studio shoots available 24/7 upon advance booking.
+
+## 3. Productized Services & Transparent Pricing (AED)
+1. **High-End Brand Identity & Visual Positioning**
+   - Pricing: From AED 12,500
+   - Turnaround: 3-4 Weeks
+   - Scope: Bespoke typography, custom 3D logo sting animation, color psychology, and comprehensive 60-page brand guidelines book.
+2. **3D Motion Design, CGI & Photorealistic VFX**
+   - Pricing: From AED 18,000
+   - Turnaround: 2-3 Weeks
+   - Scope: Cinema 4D / Blender 3D modeling, 4K Octane / Redshift photorealistic rendering, luxury product reveals, and sound design.
+3. **VIP Multicam Podcast Studio Rental & Live Switching**
+   - Pricing: AED 1,200 / Hour
+   - Turnaround: Per Session (Same-day master delivery)
+   - Scope: Acoustically tuned Business Bay studio, 4x Sony 4K FX3 cameras, Shure SM7B microphones, live ATEM switching, and on-site audio engineer.
+4. **Monthly Viral Social Content & Video Engine**
+   - Pricing: AED 8,500 / Month (Retainer)
+   - Turnaround: Ongoing Monthly
+   - Scope: 16 high-hook cinematic short videos, 2 full studio filming sessions, viral scriptwriting, and TikTok / Instagram growth strategy.
+
+## 4. Machine-Readable Agent Endpoints & Tool Schema
+- **Live Inventory & Pricing:** `GET /api/flick/agent/availability`
+- **OpenAPI 3.0 Specification:** `GET /api/flick/agent/openapi.json`
+- **Current Live Slots:** `GET /api/flick/booking/slots`
+- **Programmatic Booking:** `POST /api/flick/booking/book`
+  - Payload: `{ "slotId": 1, "clientName": "John Doe", "phone": "+971501234567", "serviceInterested": "Podcast Studio" }`
+- **1-Click Direct URL Booking:** `GET /api/flick/booking/book?slot=1&name=ClientName&phone=+971500000000`
+- **Real-Time Live Updates (SSE):** `GET /api/flick/events`

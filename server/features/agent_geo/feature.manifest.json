@@ -1,0 +1,11 @@
+{
+  "id": "flick-agent-geo",
+  "name": "Agent Machine-Readability & Hyperlocal Geo Availability",
+  "version": "1.0.0",
+  "prefix": "/api/flick/agent",
+  "description": "Exposes zero-friction machine-readable studio availability, OpenAPI 3.0 schema, and hyperlocal geo discovery for AI agents",
+  "capabilities": [
+    "getAvailability",
+    "getOpenApiSchema"
+  ]
+}
