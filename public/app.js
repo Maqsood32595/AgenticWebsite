@@ -393,134 +393,109 @@ function initCorridorParallax() {
     }
   });
 
-  // Touch Support
+  // Unified Touch Gesture Engine (Rooms 00 - 10 Horizontal & Vertical Decks)
   let touchStartX = 0;
   let touchStartY = 0;
-  let touchDragStartX = 0;
   let touchStartTime = 0;
+  let isTouchDragging = false;
+  let touchMoved = false;
 
   window.addEventListener('touchstart', (e) => {
+    if (e.touches.length !== 1) return;
+    const target = e.target;
     if (
-      e.target.closest('button') || 
-      e.target.closest('a') || 
-      e.target.closest('input') || 
-      e.target.closest('select') ||
-      e.target.closest('#flick-video-kiosk') ||
-      e.target.closest('#bottom-hud-bar')
+      target.closest('button, a, input, select, textarea') || 
+      target.closest('#flick-video-kiosk') || 
+      target.closest('#bottom-hud-bar')
     ) return;
+
+    const drawer = document.getElementById('full-screen-drawer');
+    const modal = document.getElementById('booking-modal-overlay');
+    if (drawer?.classList.contains('open') || modal?.classList.contains('active')) return;
+
     touchStartX = e.touches[0].clientX;
     touchStartY = e.touches[0].clientY;
-    touchDragStartX = currentX;
     touchStartTime = performance.now();
-    isAnimating = false;
+    isTouchDragging = true;
+    touchMoved = false;
   }, { passive: true });
 
   window.addEventListener('touchmove', (e) => {
-    const deltaX = (touchStartX - e.touches[0].clientX) * 1.15;
-    if (currentWallIndex >= 2 && currentWallIndex <= 9) {
-      const deltaY = Math.abs(touchStartY - e.touches[0].clientY);
-      if (deltaY > Math.abs(touchStartX - e.touches[0].clientX)) return;
-    }
-    currentX = Math.max(0, Math.min(touchDragStartX + deltaX, (TOTAL_WALLS - 1) * window.innerWidth));
-    applyParallaxTransforms(currentX);
+    if (!isTouchDragging || e.touches.length !== 1) return;
+    touchMoved = true;
   }, { passive: true });
 
   window.addEventListener('touchend', (e) => {
+    if (!isTouchDragging) return;
+    isTouchDragging = false;
+    if (!touchMoved) return;
+
     const touchEndX = e.changedTouches[0].clientX;
     const touchEndY = e.changedTouches[0].clientY;
-    const totalDelta = touchStartX - touchEndX;
+    const totalDeltaX = touchStartX - touchEndX;
     const totalDeltaY = touchStartY - touchEndY;
-    const timeElapsed = performance.now() - touchStartTime;
+    const absDeltaX = Math.abs(totalDeltaX);
+    const absDeltaY = Math.abs(totalDeltaY);
 
-    // Check vertical swipe in Room 03 (Web Design)
-    if (currentWallIndex === 2 && Math.abs(totalDeltaY) > Math.abs(totalDelta) && Math.abs(totalDeltaY) > 40) {
-      if (totalDeltaY > 0) {
-        glideWebDesignNext();
+    // Minimum gesture threshold (ignore micro-taps)
+    if (absDeltaX < 28 && absDeltaY < 28) return;
+
+    // Check if touch originated in an inner scrollable element with remaining scroll
+    const scrollable = e.target.closest('.faq-accordion-list, .flick-contact-form, .terminal-inspector-box');
+    if (scrollable) {
+      const atTop = scrollable.scrollTop <= 2;
+      const atBottom = Math.ceil(scrollable.scrollTop + scrollable.clientHeight) >= scrollable.scrollHeight - 2;
+      if (absDeltaY > absDeltaX) {
+        if (totalDeltaY > 0 && !atBottom) return;
+        if (totalDeltaY < 0 && !atTop) return;
+      }
+    }
+
+    // 1. Horizontal Room Gliding (Dominant X vector)
+    if (absDeltaX > absDeltaY && absDeltaX > 38) {
+      if (totalDeltaX > 0) {
+        glideNext();
       } else {
-        glideWebDesignPrev();
+        glidePrev();
       }
       return;
     }
 
-    // Check vertical swipe in Room 04 (Portfolio)
-    if (currentWallIndex === 3 && Math.abs(totalDeltaY) > Math.abs(totalDelta) && Math.abs(totalDeltaY) > 40) {
-      if (totalDeltaY > 0) {
-        glideImpactNext();
-      } else {
-        glideImpactPrev();
+    // 2. Vertical Slide Stepping (Dominant Y vector)
+    if (absDeltaY >= absDeltaX && absDeltaY > 38) {
+      if (currentWallIndex === 0) {
+        if (totalDeltaY > 0) glideAgencyNext();
+        else glideAgencyPrev();
+      } else if (currentWallIndex === 1) {
+        if (totalDeltaY > 0) glideBrandNext();
+        else glideBrandPrev();
+      } else if (currentWallIndex === 2) {
+        if (totalDeltaY > 0) glideWebDesignNext();
+        else glideWebDesignPrev();
+      } else if (currentWallIndex === 3) {
+        if (totalDeltaY > 0) glideImpactNext();
+        else glideImpactPrev();
+      } else if (currentWallIndex === 4) {
+        if (totalDeltaY > 0) glideSeoNext();
+        else glideSeoPrev();
+      } else if (currentWallIndex === 5) {
+        if (totalDeltaY > 0) glideVerticalNext();
+        else glideVerticalPrev();
+      } else if (currentWallIndex === 6) {
+        if (totalDeltaY > 0) glideSocialNext();
+        else glideSocialPrev();
+      } else if (currentWallIndex === 7) {
+        if (totalDeltaY > 0) glideEmailNext();
+        else glideEmailPrev();
+      } else if (currentWallIndex === 8) {
+        if (totalDeltaY > 0) glidePhotoNext();
+        else glidePhotoPrev();
+      } else if (currentWallIndex === 9) {
+        if (totalDeltaY > 0) glideAppNext();
+        else glideAppPrev();
+      } else if (currentWallIndex === 10) {
+        if (totalDeltaY < 0) glidePrev();
       }
-      return;
-    }
-
-    // Check vertical swipe in Room 05 (SEO)
-    if (currentWallIndex === 4 && Math.abs(totalDeltaY) > Math.abs(totalDelta) && Math.abs(totalDeltaY) > 40) {
-      if (totalDeltaY > 0) {
-        glideSeoNext();
-      } else {
-        glideSeoPrev();
-      }
-      return;
-    }
-
-    // Check vertical swipe in Room 06 (Ads & Performance)
-    if (currentWallIndex === 5 && Math.abs(totalDeltaY) > Math.abs(totalDelta) && Math.abs(totalDeltaY) > 40) {
-      if (totalDeltaY > 0) {
-        glideVerticalNext();
-      } else {
-        glideVerticalPrev();
-      }
-      return;
-    }
-
-    // Check vertical swipe in Room 07 (Social Media)
-    if (currentWallIndex === 6 && Math.abs(totalDeltaY) > Math.abs(totalDelta) && Math.abs(totalDeltaY) > 40) {
-      if (totalDeltaY > 0) {
-        glideSocialNext();
-      } else {
-        glideSocialPrev();
-      }
-      return;
-    }
-
-    // Check vertical swipe in Room 08 (Email Marketing)
-    if (currentWallIndex === 7 && Math.abs(totalDeltaY) > Math.abs(totalDelta) && Math.abs(totalDeltaY) > 40) {
-      if (totalDeltaY > 0) {
-        glideEmailNext();
-      } else {
-        glideEmailPrev();
-      }
-      return;
-    }
-
-    // Check vertical swipe in Room 09 (Photography & Videography)
-    if (currentWallIndex === 8 && Math.abs(totalDeltaY) > Math.abs(totalDelta) && Math.abs(totalDeltaY) > 40) {
-      if (totalDeltaY > 0) {
-        glidePhotoNext();
-      } else {
-        glidePhotoPrev();
-      }
-      return;
-    }
-
-    // Check vertical swipe in Room 10 (App Development)
-    if (currentWallIndex === 9 && Math.abs(totalDeltaY) > Math.abs(totalDelta) && Math.abs(totalDeltaY) > 40) {
-      if (totalDeltaY > 0) {
-        glideAppNext();
-      } else {
-        glideAppPrev();
-      }
-      return;
-    }
-
-    const velocity = Math.abs(totalDelta) / (timeElapsed || 1);
-
-    if (totalDelta > 60 || (velocity > 0.35 && totalDelta > 20)) {
-      glideNext();
-    } else if (totalDelta < -60 || (velocity > 0.35 && totalDelta < -20)) {
-      glidePrev();
-    } else {
-      const nearestIndex = Math.round(currentX / window.innerWidth);
-      glideToWall(nearestIndex);
     }
   }, { passive: true });
 
@@ -670,11 +645,18 @@ function initCorridorParallax() {
     }
   });
 
-  // Resize listener
-  window.addEventListener('resize', () => {
-    currentX = currentWallIndex * window.innerWidth;
-    applyParallaxTransforms(currentX);
-  });
+  // Dynamic Resize & Orientation Change Engine
+  let resizeTimer = null;
+  function handleViewportResize() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      targetX = currentWallIndex * window.innerWidth;
+      currentX = targetX;
+      applyParallaxTransforms(currentX);
+    }, 50);
+  }
+  window.addEventListener('resize', handleViewportResize, { passive: true });
+  window.addEventListener('orientationchange', handleViewportResize, { passive: true });
 
   // Deep Linking & Hash Routing (#services-section, #wall-2, etc.)
   initHashRouting();
@@ -696,6 +678,10 @@ function updateHudPills(activeIndex) {
   pills.forEach((pill, idx) => {
     if (idx === activeIndex) {
       pill.classList.add('active');
+      // Scroll active pill into view on mobile scrollable HUD bar
+      try {
+        pill.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      } catch (_) {}
     } else {
       pill.classList.remove('active');
     }
@@ -2391,21 +2377,37 @@ function initAutoHideTaskbar() {
     }
   });
 
-  // 5. Peek handle click directly reveals taskbar
+  // 5. Peek handle click/touch directly toggles taskbar
   const peekHandle = document.getElementById('hud-peek-handle');
   if (peekHandle) {
-    peekHandle.addEventListener('click', (e) => {
+    function toggleHud(e) {
       e.stopPropagation();
-      showBar();
+      if (bar.classList.contains('is-visible')) {
+        bar.classList.remove('is-visible');
+      } else {
+        showBar();
+      }
+    }
+    peekHandle.addEventListener('click', toggleHud);
+    peekHandle.addEventListener('touchend', (e) => {
+      e.preventDefault();
+      toggleHud(e);
     });
   }
 
-  // 6. Navigation Clicks Keep Taskbar Open Comfortably
+  // 6. Dismiss on tap outside taskbar (mobile UX)
+  document.addEventListener('touchstart', (e) => {
+    if (bar.classList.contains('is-visible') && !bar.contains(e.target) && !peekHandle?.contains(e.target)) {
+      scheduleHide(100);
+    }
+  }, { passive: true });
+
+  // 7. Navigation Clicks Keep Taskbar Open Comfortably
   bar.querySelectorAll('button, a').forEach(el => {
     el.addEventListener('click', () => {
       showBar();
       if (!isPointerOverBar) {
-        scheduleHide(2000);
+        scheduleHide(2200);
       }
     });
   });

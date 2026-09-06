@@ -91,6 +91,7 @@ body.theme-light {
 html, body {
   width: 100vw;
   height: 100vh;
+  height: 100dvh;
   overflow: hidden;
   background: var(--bg-primary);
   color: var(--text-primary);
@@ -106,6 +107,7 @@ html, body {
   position: relative;
   width: 100vw;
   height: 100vh;
+  height: 100dvh;
   overflow: hidden;
   perspective: 1400px;
   background: var(--bg-corridor);
@@ -2010,12 +2012,6 @@ body.theme-light .peek-indicator {
   flex-grow: 1;
 }
 
-@media (max-width: 992px) {
-  .hud-info-left {
-    display: none;
-  }
-}
-
 .hud-pill {
   padding: 5px 11px;
   border-radius: 65px;
@@ -2605,4 +2601,506 @@ body.theme-light .input-field:focus {
   border-color: #0d0d0d;
   box-shadow: 0 0 0 2px rgba(13, 13, 13, 0.08);
 }
+
+/* ==========================================================================
+   11. COMPREHENSIVE RESPONSIVE DESIGN SYSTEM (Mobile, Tablet & Small Screens)
+   ========================================================================== */
+
+/* Tablet & Medium Displays (<= 1024px) */
+@media (max-width: 1024px) {
+  .site-header {
+    padding: 0 24px;
+  }
+
+  .nav-location-pill span {
+    display: none;
+  }
+
+  .corridor-wall-room {
+    padding: 80px 24px 32px 24px;
+  }
+
+  .wall-card-box,
+  .vertical-deck-container {
+    width: 92%;
+    padding: 36px 32px;
+  }
+
+  .vertical-deck-slide {
+    padding: 28px 36px;
+  }
+
+  .services-showcase-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .v-grid-6 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .v-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .v-process-row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .portfolio-video-trio-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .drawer-grid-body {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .drawer-link-item {
+    font-size: 2.4rem;
+  }
+}
+
+/* Mobile & Smartphone Displays (<= 768px) */
+@media (max-width: 768px) {
+  /* 3D Corridor Viewport & Stage */
+  .corridor-viewport {
+    perspective: 900px;
+  }
+
+  .corridor-ceiling {
+    height: 11vh;
+    transform: rotateX(30deg);
+  }
+
+  .corridor-floor {
+    height: 11vh;
+    transform: rotateX(-30deg);
+  }
+
+  .corridor-wall-room {
+    padding: 68px 12px 18px 12px;
+    height: 100vh;
+    height: 100dvh;
+  }
+
+  /* Card Containers */
+  .wall-card-box {
+    width: 98%;
+    max-width: 100%;
+    min-height: auto;
+    max-height: calc(100vh - 84px);
+    max-height: calc(100dvh - 84px);
+    padding: 20px 16px;
+    border-radius: 20px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .vertical-deck-container {
+    width: 98%;
+    max-width: 100%;
+    height: calc(100vh - 84px);
+    height: calc(100dvh - 84px);
+    min-height: auto;
+    max-height: calc(100dvh - 84px);
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .vertical-deck-slide {
+    padding: 18px 14px 20px 14px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Floating Stepper Dock */
+  .vertical-stepper-dock {
+    right: 6px;
+    transform: translateY(-50%) scale(0.85);
+    padding: 6px 3px;
+    gap: 4px;
+  }
+
+  .v-step-pill {
+    padding: 3px 4px;
+  }
+
+  /* Typography Scaling */
+  .wall-tag {
+    font-size: 0.64rem;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+
+  .wall-main-headline {
+    font-size: 1.85rem !important;
+    line-height: 1.15;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+  }
+
+  .wall-header-title {
+    font-size: 1.75rem !important;
+    line-height: 1.15;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+  }
+
+  .story-lead {
+    font-size: 1.02rem !important;
+    line-height: 1.35;
+    margin-bottom: 12px;
+  }
+
+  .story-body {
+    font-size: 0.88rem !important;
+    line-height: 1.6;
+    margin-bottom: 18px;
+  }
+
+  .wall-quote-subtext {
+    font-size: 0.95rem !important;
+    line-height: 1.45;
+    margin-bottom: 16px;
+  }
+
+  /* Manifesto Hero Buttons */
+  .manifesto-actions-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    margin-bottom: 16px;
+    width: 100%;
+  }
+
+  .speech-bubble-drama {
+    width: 100%;
+    justify-content: center;
+    padding: 11px 18px;
+    font-size: 0.84rem;
+  }
+
+  .btn-gold,
+  .btn-outline {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 18px;
+    font-size: 0.82rem;
+  }
+
+  .arrow-callout-row {
+    margin-top: 12px;
+    gap: 10px;
+  }
+
+  .arrow-callout-icon {
+    font-size: 1.5rem;
+  }
+
+  .arrow-callout-text {
+    font-size: 0.80rem;
+    line-height: 1.4;
+  }
+
+  /* All Grids to 1-Column */
+  .wall-features-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .feature-pill-card {
+    padding: 14px 16px;
+  }
+
+  .services-showcase-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .service-card-item {
+    padding: 18px 16px;
+    border-radius: 16px;
+  }
+
+  .service-price-text {
+    font-size: 1.15rem;
+  }
+
+  .portfolio-video-trio-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .v-grid-6 {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .v-grid-4 {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .v-card-item {
+    padding: 14px 16px;
+    border-radius: 14px;
+  }
+
+  .v-process-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .v-process-step-card {
+    padding: 12px 14px;
+    border-radius: 12px;
+  }
+
+  .v-services-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .perf-pillar-card {
+    padding: 16px 18px;
+    border-radius: 14px;
+  }
+
+  .perf-process-step {
+    padding: 12px 14px;
+  }
+
+  .m2-dashboard-card {
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .m2-stat-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .m2-stat-val {
+    font-size: 1.05rem;
+  }
+
+  /* Contact Room 10 */
+  .contact-room-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .contact-address-card {
+    padding: 18px 16px;
+    border-radius: 16px;
+  }
+
+  .flick-contact-form {
+    padding: 18px 16px;
+    border-radius: 16px;
+    max-height: none;
+  }
+
+  .contact-form-grid-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .slots-showcase-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .slot-ticket-card {
+    padding: 16px 18px;
+  }
+
+  .terminal-inspector-box {
+    padding: 12px;
+    font-size: 0.72rem;
+  }
+
+  /* Top Header */
+  .site-header {
+    height: 58px;
+    padding: 0 12px;
+  }
+
+  .nav-flick-logo {
+    font-size: 1.85rem;
+  }
+
+  .nav-location-pill {
+    display: none !important;
+  }
+
+  .nav-right-group {
+    gap: 6px;
+  }
+
+  .nav-direct-phone {
+    padding: 6px 10px;
+    font-size: 0.74rem;
+    gap: 4px;
+  }
+
+  .btn-theme-toggle {
+    padding: 6px 10px;
+  }
+
+  .btn-theme-toggle .theme-text {
+    display: none;
+  }
+
+  .btn-menu-hamburger {
+    width: 36px;
+    height: 36px;
+  }
+
+  /* Taskbar Bottom HUD */
+  .bottom-hud-bar {
+    height: 52px;
+    padding: 5px 8px;
+    max-width: 100vw;
+    border-radius: 0;
+  }
+
+  .hud-info-left {
+    display: none !important;
+  }
+
+  .hud-nav-pills {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    justify-content: flex-start;
+    gap: 5px;
+    padding: 2px 4px;
+  }
+
+  .hud-nav-pills::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hud-pill {
+    padding: 5px 10px;
+    font-size: 0.68rem;
+    flex-shrink: 0;
+  }
+
+  .hud-glider-controls {
+    gap: 4px;
+    flex-shrink: 0;
+  }
+
+  .btn-hud-glide {
+    padding: 5px 8px;
+    font-size: 0.68rem;
+  }
+
+  .hud-peek-handle {
+    top: -22px;
+  }
+
+  .peek-indicator {
+    font-size: 0.56rem;
+    padding: 3px 10px;
+    letter-spacing: 0.8px;
+  }
+
+  /* Full Screen Drawer Menu */
+  .flick-full-drawer {
+    padding: 20px 16px;
+  }
+
+  .drawer-top-bar {
+    margin-bottom: 20px;
+  }
+
+  .drawer-flick-logo {
+    font-size: 1.85rem;
+  }
+
+  .drawer-grid-body {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .drawer-left-links {
+    gap: 12px;
+  }
+
+  .drawer-link-item {
+    font-size: 1.65rem;
+  }
+
+  .drawer-contact-value {
+    font-size: 1.1rem;
+  }
+
+  /* Booking Modal Overlay */
+  .modal-overlay {
+    padding: 12px;
+  }
+
+  .modal-content-box {
+    padding: 22px 18px;
+    border-radius: 20px;
+    width: 100%;
+    max-height: 90vh;
+    max-height: 90dvh;
+    overflow-y: auto;
+  }
+
+  /* Floating Reel Pill & Video Kiosk */
+  .flick-reel-dock-pill {
+    bottom: 58px;
+    right: 12px;
+    font-size: 0.70rem;
+    padding: 7px 12px;
+  }
+
+  .flick-video-kiosk {
+    width: calc(100vw - 28px);
+    max-width: 300px;
+    right: 14px;
+    bottom: 64px;
+  }
+
+  /* Slide Footers with Navigation Hints & Buttons */
+  .v-slide-hint {
+    font-size: 0.65rem;
+    letter-spacing: 0.5px;
+  }
+
+  .vertical-deck-slide > div:last-child {
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+  }
+}
+
+/* Compact Smartphones (<= 480px) */
+@media (max-width: 480px) {
+  .wall-main-headline {
+    font-size: 1.65rem !important;
+  }
+
+  .wall-header-title {
+    font-size: 1.55rem !important;
+  }
+
+  .site-header {
+    padding: 0 10px;
+  }
+
+  .m2-stat-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
